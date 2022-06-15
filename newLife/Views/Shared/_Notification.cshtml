@@ -1,0 +1,72 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@if (TempData["deletedCg"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["deletedCg"]');
+
+
+    </script>
+}
+@if (TempData["deletedCT"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["deletedCT"]');
+
+
+    </script>
+}
+@if (TempData["addCg"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["addCg"]');
+
+
+    </script>
+}
+@if (TempData["EditCg"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["EditCg"]');
+
+
+    </script>
+}
+@if (TempData["EditCT"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["EditCT"]');
+
+
+    </script>
+}
+
+@if (TempData["SuccessCT"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.success('@TempData["SuccessCT"]');
+
+
+    </script>
+}
