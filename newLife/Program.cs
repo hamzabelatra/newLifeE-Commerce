@@ -6,6 +6,7 @@ using newLife.DataAccess.Repositry.IRepositry;
 using newLife.DataAcess.Data;
 using newLife.Utility;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 
