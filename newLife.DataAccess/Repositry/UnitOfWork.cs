@@ -15,6 +15,8 @@ namespace newLife.DataAccess.Repositry
             Company = new CompanyRepositry(_db);
             ApplicationUser = new ApplicationUserRepositry(_db);
             ShoppingCart = new ShoppingCartRepositry(_db);
+            OrderHeader = new OrderHeaderRepositry(_db);
+            OrderDetail = new OrderDetailRepositry(_db);
         }
         public ICategoryRepository Category { get; private set; }
         public ICoverTypeRepositry CoverType { get; private set; }
@@ -22,6 +24,8 @@ namespace newLife.DataAccess.Repositry
         public ICompanyRepositry Company { get; private set; }
         public IShoppingCartRepository ShoppingCart { get; private set; }
         public IApplicationUserRepositry ApplicationUser { get; private set; }
+        public IOrderDetailRepositry OrderDetail { get; private set; }
+        public IOrderHeaderRepositry OrderHeader { get; private set; }
 
         public void Save()
         {

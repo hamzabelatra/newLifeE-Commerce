@@ -14,7 +14,16 @@ namespace newLife.DataAccess.Repositry
             _db = db;
         }
 
+        public int DecrementCount(ShoppingCart cart, int count)
+        {
+            cart.count -= count;
+            return cart.count;
+        }
 
-
+        public int IncrementCount(ShoppingCart cart, int count)
+        {
+            cart.count += count;
+            return cart.count;
+        }
     }
 }

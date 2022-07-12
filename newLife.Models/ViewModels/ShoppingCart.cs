@@ -18,5 +18,7 @@ namespace newLife.Models
         [ForeignKey("ApplicationUserId")]
         [ValidateNever]
         public ApplicationUser ApplicationUser { get; set; }
+        [NotMapped]
+        public Double Price { get; set; }
     }
 }

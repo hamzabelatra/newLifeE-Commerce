@@ -43,7 +43,17 @@ namespace newLife.Controllers
             var claimsIdentity = (ClaimsIdentity)User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             shoppingCart.ApplicationUserId = claim.Value;
-            _unitofwork.ShoppingCart.Add(shoppingCart);
+
+            ShoppingCart cartFromDb = _unitofwork.ShoppingCart.GetFirstOrDefault(u => u.ApplicationUserId == claim.Value &&
+            u.ProdcutId == shoppingCart.ProdcutId);
+            if (cartFromDb == null)
+            {
+                _unitofwork.ShoppingCart.Add(shoppingCart);
+            }
+            else
+            {
+                _unitofwork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.count);
+            }
             _unitofwork.Save();
 
 
